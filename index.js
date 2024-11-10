@@ -15,6 +15,11 @@ app.get("/", (req, res) => {
     res.render("index.ejs", {
       });
   });
+  app.get("/compose", function(req, res){
+    res.render("compose.ejs", {
+
+    });
+  });
 
 app.listen(port, () => {
     console.log(`Server lounched on port ${port}.`);

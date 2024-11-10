@@ -1,3 +1,123 @@
+* {
+    box-sizing: border-box;
+  }
+  
 body {
-    background-color: aquamarine;
+    margin:0;
+    padding:0;
+    background-color: lightblue;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #033558;
+}
+
+
+nav {
+    display: flex;
+    justify-content: end;
+    box-sizing: border-box;
+    border: #06639D solid 3px;
+    border-radius: 15px;
+    background-color: #4799CC;
+    padding: 0 100px; 
+}
+
+ul {
+    display: flex;
+    margin-right: -5rem;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px 15px;
+    text-decoration: none;  
+}
+
+a {
+/* position: relative;
+  display: block;
+  transition-duration: 0.2s; */
+    position:relative;
+    display: block;
+  transition-duration: 0.2s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 24px;
+    text-decoration: none;
+    color: lightblue;
+    -webkit-text-stroke: 1px #033558;
+    padding: 10px;
+}
+
+a:hover {
+    padding-top: 5px;
+  transition-duration: 0.2s;
+
+}
+
+main {
+    padding: 0 120px;
+    min-height:100%;
+    position:relative;
+}
+
+h1 {
+    font-weight: 900;
+    margin-top: 30px;
+    text-align: center;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 22px;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(250, 227, 114);
+    border: rgb(255, 196, 0) solid 3px;
+    border-radius: 15px;
+    width: 10%;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    color: lightblue;
+    -webkit-text-stroke: 0.5px #033558;
+}
+
+button:hover {
+    background-color: rgb(247, 228, 129);
+    border: rgb(218, 185, 77);
+    font-size: 28px;
+    color: rgb(145, 219, 243);
+}
+
+.start {
+    vertical-align: baseline;
+    display: flex;  
+    justify-content:center; 
+    gap: 1rem;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    box-sizing: border-box;
+    border: #06639D solid 3px;
+    border-radius: 15px;
+    background-color: #4799CC;
+    padding: 0 100px;
+    bottom: 0;
+    color: lightblue;
+    -webkit-text-stroke: 0.5px #033558;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
 }
