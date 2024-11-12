@@ -82,7 +82,6 @@ button {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-size: 26px;
-    color: #033558;
     -webkit-text-stroke: 0.5px #033558;
 }
 
@@ -100,24 +99,7 @@ button:hover {
 
 }
 
-footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    box-sizing: border-box;
-    border: #06639D solid 3px;
-    border-radius: 15px;
-    background-color: #4799CC;
-    padding: 0 100px;
-    bottom: 0;
-    color: lightblue;
-    -webkit-text-stroke: 0.5px #033558;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 16px;
-    text-align: center;
-}
+
 
 form { 
     position: relative;
@@ -172,4 +154,23 @@ textarea {
 
 .edit {
     color: green;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    box-sizing: border-box;
+    border: #06639D solid 3px;
+    border-radius: 15px;
+    background-color: #4799CC;
+    padding: 0 100px;
+    bottom: 0;
+    color: lightblue;
+    -webkit-text-stroke: 0.5px #033558;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
 }
