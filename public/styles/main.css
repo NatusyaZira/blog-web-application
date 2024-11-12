@@ -5,7 +5,7 @@
 body {
     margin:0;
     padding:0;
-    background-color: lightblue;
+    background-color: white;
     font-family: "Shadows Into Light", cursive;
     font-weight: 400;
     font-style: normal;
@@ -17,6 +17,7 @@ nav {
     display: flex;
     justify-content: end;
     box-sizing: border-box;
+    height: 80px;
     border: #06639D solid 3px;
     border-radius: 15px;
     background-color: #4799CC;
@@ -35,12 +36,9 @@ li {
 }
 
 a {
-/* position: relative;
-  display: block;
-  transition-duration: 0.2s; */
     position:relative;
     display: block;
-  transition-duration: 0.2s;
+    transition-duration: 0.2s;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -48,12 +46,11 @@ a {
     text-decoration: none;
     color: lightblue;
     -webkit-text-stroke: 1px #033558;
-    padding: 10px;
 }
 
 a:hover {
     padding-top: 5px;
-  transition-duration: 0.2s;
+    transition-duration: 0.2s;
 
 }
 
@@ -64,43 +61,43 @@ main {
 }
 
 h1 {
+    font-size: 40px;
     font-weight: 900;
     margin-top: 30px;
     text-align: center;
 }
 
 p {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 22px;
-    text-align: center;
 }
 
 button {
     background-color: rgb(250, 227, 114);
-    border: rgb(255, 196, 0) solid 3px;
+    border: #ffc400 solid 3px;
     border-radius: 15px;
-    width: 10%;
+    width: 150px;
+    height: 50px;
     text-align: center;
-    box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-size: 26px;
-    color: lightblue;
+    color: #033558;
     -webkit-text-stroke: 0.5px #033558;
 }
 
 button:hover {
-    background-color: rgb(247, 228, 129);
+    background-color: #f7e481;
     border: rgb(218, 185, 77);
     font-size: 28px;
     color: rgb(145, 219, 243);
 }
 
 .start {
-    vertical-align: baseline;
     display: flex;  
     justify-content:center; 
-    gap: 1rem;
+    padding-top: 50px;
+
 }
 
 footer {
@@ -120,4 +117,59 @@ footer {
     font-style: normal;
     font-size: 16px;
     text-align: center;
+}
+
+form { 
+    position: relative;
+    
+}
+
+fieldset {
+    border:none;
+}
+
+label {
+    position:inherit;
+    margin-left: 10%;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+input, textarea { 
+    display: block; 
+    width: 80%; 
+    margin: 0 auto;
+    border: #7bc4f1 solid 3px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    background-color: #dfeff8;
+}
+
+textarea {
+    height: 200px;
+}
+
+.button {
+    padding-top: 60px;
+    justify-self: center;
+}
+
+.published {
+    text-align: left;
+    width: 80%; 
+    margin: 0 auto;
+    border: #ffc400 solid 3px;
+    border-radius: 15px;
+    background-color: #f7e481;
+    padding:3em;
+}
+
+.delete {
+    color: red;
+}
+
+.edit {
+    color: green;
 }
