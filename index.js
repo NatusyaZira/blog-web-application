@@ -35,6 +35,30 @@ app.post("/compose", function(req, res){
 
 });
 
+app.get("/edit/:postName", (req, res) => {
+  const reqTitle = req.params.postName;
+  posts.forEach(function(post){
+    const storTitle = post.title;
+
+    if (storTitle === reqTitle) {
+      res.render("edit", {
+        title: post.title,
+        content: post.content
+      });
+    }
+  });
+});
+
+app.post("/edit", (req, res) => {
+  const post = {
+    title: req.body.postTitle,
+    content: req.body.postBody
+  };
+  posts.push(post);
+
+  res.redirect("/");
+
+  });
 
 
 app.listen(port, () => {

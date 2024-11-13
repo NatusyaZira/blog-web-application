@@ -1,16 +1,16 @@
 <%- include("partials/header"); -%>
-<form action="/compose" method="POST">
+<form action="/edit" method="POST">
     <fieldset>
       <div>
         <label for="title">Title</label>
-        <input class="title" type="text" id="bTitle" name="postTitle" required>
+        <input class="title" type="text" name="editedTitle" value="<%= title %>"></input>
       </div>
       <div>
         <label for="post">Post</label>
-        <textarea type="text" class="post" name="postBody" id="bPost" required></textarea>
+        <textarea class="post" name="editedBody" id="post"><%= content %></textarea>
       </div>
       <div class="button" >
-        <button name="button" type="submit" value="Share">Share</button>
+        <button name="button" type="submit">Save</button>
       </div>
     </fieldset>
     </form>

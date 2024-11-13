@@ -157,15 +157,15 @@ textarea {
 }
 
 footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     box-sizing: border-box;
     border: #06639D solid 3px;
     border-radius: 15px;
     background-color: #4799CC;
     padding: 0 100px;
-    bottom: 0;
     color: lightblue;
     -webkit-text-stroke: 0.5px #033558;
     font-family: "Roboto", sans-serif;
