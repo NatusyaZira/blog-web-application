@@ -1,21 +1,26 @@
 import express from "express";
 import bodyParser from "body-parser";
+import ejs from "ejs";
 
 const app = express();
 const port = 3000;
 
-app.use(express.static("public"));
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 let posts = [];
 
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+    res.render("index", {
+      posts: posts
+    });
   });
 
 
 app.get("/compose", (req, res) => {
-  res.render("compose.ejs");
+  res.render("compose");
 });
 
 app.post("/compose", function(req, res){

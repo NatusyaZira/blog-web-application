@@ -1,3 +1,17 @@
 <%- include("partials/header"); -%>
-<%- include("partials/share-post"); -%>
+<form action="/compose" method="POST">
+    <fieldset>
+      <div>
+        <label for="title">Title</label>
+        <input class="title" type="text" name="postTitle">
+      </div>
+      <div>
+        <label for="post">Post</label>
+        <textarea class="post" name="postBody" id="post"></textarea>
+      </div>
+      <div class="button" >
+        <button name="button" type="submit">Share</button>
+      </div>
+    </fieldset>
+    </form>
 <%- include("partials/footer"); -%>

@@ -141,7 +141,7 @@ textarea {
 .published {
     text-align: left;
     width: 80%; 
-    margin: 0 auto;
+    margin: 20px auto;
     border: #ffc400 solid 3px;
     border-radius: 15px;
     background-color: #f7e481;
