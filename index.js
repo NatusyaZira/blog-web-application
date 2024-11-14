@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import ejs from "ejs";
+
 
 const app = express();
 const port = 3000;
@@ -23,7 +23,7 @@ app.get("/compose", (req, res) => {
   res.render("compose");
 });
 
-app.post("/compose", function(req, res){
+app.post("/compose", (req, res) => {
   const post = {
     title: req.body.postTitle,
     content: req.body.postBody
@@ -35,9 +35,15 @@ app.post("/compose", function(req, res){
 
 });
 
+app.post('/delete', (req, res) => {
+  const { index } = req.body;
+  posts.splice(index, 1);
+  res.redirect('/');
+});
+
 app.get("/edit/:postName", (req, res) => {
   const reqTitle = req.params.postName;
-  posts.forEach(function(post){
+  posts.forEach((post, index) => {
     const storTitle = post.title;
 
     if (storTitle === reqTitle) {
@@ -49,16 +55,19 @@ app.get("/edit/:postName", (req, res) => {
   });
 });
 
-app.post("/edit", (req, res) => {
-  const post = {
-    title: req.body.postTitle,
-    content: req.body.postBody
-  };
-  posts.push(post);
-
-  res.redirect("/");
-
+app.put("/edit/:postName", (req, res) => {
+  const reqTitle = req.params.postName;
+  const { title, content } = req.body;
+const postIndex = posts.findIndex(post => post.reqTitle === reqTitle);
+posts[postIndex] = {title, content};
+res.redirect('/');
   });
+
+  app.post('/delete', (req, res) => {
+    const { index } = req.body;
+    posts.splice(index, 1);  // Removes the post at the specified index
+    res.redirect('/');
+});
 
 
 app.listen(port, () => {
