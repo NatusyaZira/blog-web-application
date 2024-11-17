@@ -92,6 +92,13 @@ button:hover {
     color: rgb(145, 219, 243);
 }
 
+.buttons {
+    display: flex;
+    justify-content: end;
+    box-sizing: border-box;
+    gap: 2rem;
+}
+
 .start {
     display: flex;  
     justify-content:center; 

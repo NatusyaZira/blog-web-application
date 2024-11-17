@@ -1,17 +1,19 @@
-<%- include("partials/header"); -%>
-<form action="/compose" method="POST">
+<%- include("partials/header") %>
+
+<form action="/compose" method="post">
     <fieldset>
-      <div>
-        <label for="title">Title</label>
-        <input class="title" type="text" id="bTitle" name="postTitle" required>
-      </div>
-      <div>
-        <label for="post">Post</label>
-        <textarea type="text" class="post" name="postBody" id="bPost" required></textarea>
-      </div>
-      <div class="button" >
-        <button name="button" type="submit" value="Share">Share</button>
-      </div>
+        <div>
+            <label for="title">Title</label>
+            <input class = "title" type="text" name="postTitle" required >
+        </div>
+        <div>
+            <label for="post">Posts</label>
+            <textarea type="text" class="post" name="postBody" required></textarea>
+        </div>
+        <div class="button">
+            <button name="button" type="submit" value="Share">Share</button>
+        </div>
     </fieldset>
-    </form>
-<%- include("partials/footer"); -%>
+</form>
+
+<%- include("partials/footer") %>

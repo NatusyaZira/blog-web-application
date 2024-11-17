@@ -1,21 +1,23 @@
-<%- include("partials/header"); -%>
+<%- include("partials/header") %>
 
-<%  posts.forEach((post,index) => { %>
-    <div class="published">
-        <h2><%=post.title%></h2>
-        <p> <%=post.content%></p>
-    <div class="buttons">
-    <form action="/delete" method="post">
-        <input type="hidden" name="index" value="<%= index %>">
-        <button type="submit" class="delete">Delete</button>
-    </form>
-    <form action="/update" method="post">
-        <input type="hidden" name="index" value="<%= index %>">
-        <button type="submit" class="edit"><a href="/edit/<%=post.title%>">Edit</a></button>
-    </form>
-    </div>  
-    </div>
-    <% }); %>
+<% if(posts.length !== 0){ %>
+    <%  posts.forEach((post,index) => { %>
+        <div class="published">
+            <h2><%=post.title%></h2>
+            <p> <%=post.content%></p>
+        <div class="buttons">
+        <form action="/delete" method="post">
+            <input type="hidden" name="index" value="<%= index %>">
+            <button type="submit" class="delete" >Delete</button>
+        </form>
 
-<%- include("partials/main"); -%>
-<%- include("partials/footer"); -%>
+            <button type="submit" class="edit"><a href="/edit/<%=post.title%>">Edit</a></button>
+
+        </div>
+        </div>
+        <% }); %>
+<% } else { %>
+        <%- include("partials/main") %>
+        <% } %>
+
+<%- include("partials/footer") %>
